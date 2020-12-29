@@ -46,3 +46,7 @@ If you don't have Maven installed in your local environment, you can use Maven W
 ```
 ## Usage
 
+
+
+
+If you have any questions, please don't hesitate to contact us via Github with open an issue or contact us at destek@weepay.co.
