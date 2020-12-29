@@ -24,7 +24,7 @@ Java version 1.7 or newer
 
 ### Gradle installation
 ```groovy
-compile "co.weepay:iyzipay-java:1.0.0"
+compile "co.weepay:weepay-java:1.0.0"
 ```
 ### Other installation
 If you use Gradle Groovy DSL, Gradle Kotlin DSL, Scala SBT, Apache Ivy, Groovy Grape, Leiningen, Apache Buildr, Maven Central Badge, PURL,
