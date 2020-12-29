@@ -27,8 +27,8 @@ Java version 1.7 or newer
 compile "co.weepay:weepay-java:1.0.0"
 ```
 ### Other installation
-If you use Gradle Groovy DSL, Gradle Kotlin DSL, Scala SBT, Apache Ivy, Groovy Grape, Leiningen, Apache Buildr, Maven Central Badge, PURL,
-Bazel you should visit this page [maven.org](https://weepay.co "https://search.maven.org/artifact/co.weepay/weepay-java/") and select version.
+If you use **Gradle Groovy DSL, Gradle Kotlin DSL, Scala SBT, Apache Ivy, Groovy Grape, Leiningen, Apache Buildr, Maven Central Badge, PURL,
+Bazel** you should visit this page [maven.org](https://weepay.co "https://search.maven.org/artifact/co.weepay/weepay-java/") and select version.
 
 
 You'll need to manually install the following JARs:
