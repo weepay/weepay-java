@@ -42,7 +42,7 @@ You'll need to manually install the following JARs:
 If you don't have Maven installed in your local environment, you can use Maven Wrapper script:
 
 ```console
-foo@bar:~$ ./mvnw clean install
+./mvnw clean install
 ```
 ## Usage
 
