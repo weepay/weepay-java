@@ -1,0 +1,15 @@
+    //Auth
+    GetPaymentRequest request = new GetPaymentRequest();
+    Auth options = new Auth();
+
+    options.setBayiId(bayiId);
+    options.setApiKey("apiKey");
+    options.setSecretKey("secretKey");
+    options.setBaseUrl("https://api.weepay.co");
+
+    request.setOptions(options);
+    request.setOrderId("1");
+
+    GetPaymentModel payment = GetPaymentModel.create(request, options);
+
+    System.out.println(payment.getData().getPaymentStatus());
