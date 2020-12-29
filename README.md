@@ -46,7 +46,7 @@ If you don't have Maven installed in your local environment, you can use Maven W
 ```
 ## Usage
 ```Java
- //Auth
+    //Auth
     Auth options = new Auth();
 
     options.setBayiId(bayiId);
