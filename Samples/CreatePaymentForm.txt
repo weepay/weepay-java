@@ -1,0 +1,75 @@
+    //Auth
+    Auth options = new Auth();
+
+    options.setBayiId(bayiId);
+    options.setApiKey("apiKey");
+    options.setSecretKey("secretKey");
+    options.setBaseUrl("https://api.weepay.co");
+
+    // Request
+    FormInitializeRequest request = new FormInitializeRequest();
+    request.setOptions(options);
+    request.setOrderId("1");
+    request.setIpAddress("192.168.1.2");
+    request.setPrice(35.50);
+    request.setCurrency(Currency.TL.name());
+    request.setLocale(Locale.TR.getValue());
+    request.setDescription("Açıklama Alanı");
+    request.setCallBackUrl("https://websitem.com/callback");
+    request.setInstallmentNumber(1);
+    request.setPaymentGroup(PaymentGroup.PRODUCT.name());
+    request.setPaymentChannel(PaymentChannel.WEB.name());
+
+    // Customer
+    Customer customer = new Customer();
+    customer.setCustomerId(1);
+    customer.setCustomerName("isim");
+    customer.setCustomerSurname("soyisim");
+    customer.setGsmNumber("50XXXXXX");
+    customer.setEmail("hello@weepay.co");
+    customer.setIdentityNumber("00032222721");
+    customer.setCity("istanbul");
+    customer.setCountry("turkey");
+    request.setCustomer(customer);
+
+    // Address
+    // Billing Address
+    Address billingAddress = new Address();
+    billingAddress.setContactName("isim soyisim");
+    billingAddress.setAddress("address");
+    billingAddress.setCity("city");
+    billingAddress.setCountry("turkey");
+    billingAddress.setZipCode("34164");
+    request.setBillingAddress(billingAddress);
+
+    // Address
+    // Shipping Address
+    Address shippingAddress = new Address();
+    shippingAddress.setContactName("isim soyisim");
+    shippingAddress.setAddress("address");
+    shippingAddress.setCity("city");
+    shippingAddress.setCountry("turkey");
+    shippingAddress.setZipCode("34164");
+    request.setShippingAddress(shippingAddress);
+
+    // Products
+    // First Product
+    List<Product> products = new ArrayList<Product>();
+    Product firstProduct = new Product();
+    firstProduct.setName("Ürün bir");
+    firstProduct.setProductId(1234);
+    firstProduct.setProductPrice(0.10);
+    firstProduct.setItemType(ProductType.PHYSICAL.name());
+    products.add(firstProduct);
+
+    // Second Product
+    Product secondProduct = new Product();
+    secondProduct.setName("Ürün iki");
+    secondProduct.setProductId(4567);
+    secondProduct.setProductPrice(0.10);
+    secondProduct.setItemType(ProductType.PHYSICAL.name());
+    products.add(secondProduct);
+    request.setProducts(products);
+
+    CheckoutFormInitialize payment = CheckoutFormInitialize.create(request, options);
+    System.out.println(payment.getCheckoutFormData());
